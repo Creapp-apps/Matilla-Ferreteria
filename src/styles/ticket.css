@@ -1,0 +1,117 @@
+/* Thermal Ticket Print Stylesheets for Matilla Ferretería */
+
+@media print {
+  /* Reset document for printer */
+  body, html {
+    background: #fff !important;
+    color: #000 !important;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Hide app layouts and screen panels */
+  .app-container,
+  .main-content,
+  nav,
+  button,
+  .btn,
+  .modal-overlay,
+  header,
+  footer,
+  aside,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Expose ticket wrapper */
+  .print-ticket-wrapper {
+    display: block !important;
+    width: 80mm; /* Standard width for thermal receipt printers */
+    max-width: 80mm;
+    margin: 0 auto;
+    padding: 5mm;
+    box-sizing: border-box;
+  }
+
+  .ticket-header {
+    text-align: center;
+    margin-bottom: 5mm;
+  }
+
+  .ticket-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  .ticket-subtitle {
+    font-size: 10px;
+    color: #333;
+  }
+
+  .ticket-divider {
+    border-top: 1px dashed #000;
+    margin: 4mm 0;
+  }
+
+  .ticket-info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+
+  .ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+  }
+
+  .ticket-table th {
+    text-align: left;
+    border-bottom: 1px dashed #000;
+    padding-bottom: 2px;
+  }
+
+  .ticket-table td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    vertical-align: top;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .ticket-totals {
+    margin-top: 4mm;
+    font-size: 12px;
+  }
+
+  .ticket-total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+  }
+
+  .ticket-grand-total {
+    font-weight: bold;
+    font-size: 14px;
+    border-top: 1px dashed #000;
+    padding-top: 2px;
+  }
+
+  .ticket-footer {
+    text-align: center;
+    margin-top: 8mm;
+    font-size: 9px;
+  }
+}
+
+/* Fallback hidden screen rendering */
+.print-ticket-wrapper {
+  display: none;
+}

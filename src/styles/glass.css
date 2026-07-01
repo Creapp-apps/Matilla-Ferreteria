@@ -1,0 +1,76 @@
+/* Glassmorphism & UI Layout helper styles for Matilla Ferretería */
+
+.glass-panel {
+  background: var(--bg-surface);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.glass-panel-hover:hover {
+  border-color: var(--border-color-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.glass-panel-active {
+  border-color: var(--border-color-glow);
+  box-shadow: var(--shadow-glow), var(--shadow-md);
+}
+
+.glass-card {
+  background: var(--bg-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-color-hover);
+  box-shadow: var(--shadow-md);
+}
+
+/* Scrollbar styling for high-density tables */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* Subtly animated gradient backgrounds */
+.bg-gradient-glow {
+  background: linear-gradient(135deg, var(--bg-app) 0%, hsl(222, 20%, 10%) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-gradient-glow::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, var(--color-primary-glow) 0%, transparent 70%);
+  opacity: 0.15;
+  pointer-events: none;
+  filter: blur(50px);
+}

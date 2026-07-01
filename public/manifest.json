@@ -1,0 +1,30 @@
+{
+  "name": "Matilla Ferretería",
+  "short_name": "Matilla",
+  "description": "Sistema Inteligente de Gestión y Punto de Venta para Matilla Ferretería",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b090a",
+  "theme_color": "#eb5e28",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "vite.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "vite.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

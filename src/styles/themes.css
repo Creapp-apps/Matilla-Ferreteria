@@ -1,0 +1,119 @@
+/* Design Tokens & Theme Variables for Matilla Ferretería */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* Fonts */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.12), 0 2px 8px -2px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 16px 40px -8px rgba(0, 0, 0, 0.2), 0 4px 12px -2px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 20px -2px var(--color-primary-glow);
+}
+
+/* Dark Theme (Default & Preferred for modern screen interfaces) */
+:root, [data-theme="dark"] {
+  --bg-app: hsl(222, 24%, 6%);
+  --bg-surface: hsla(222, 20%, 10%, 0.7);
+  --bg-surface-solid: hsl(222, 20%, 10%);
+  --bg-surface-hover: hsla(222, 20%, 15%, 0.8);
+  --bg-surface-active: hsla(222, 20%, 18%, 1);
+
+  /* Primary Accent: Premium Hardware Amber/Orange */
+  --color-primary: hsl(24, 95%, 55%);
+  --color-primary-hover: hsl(24, 95%, 48%);
+  --color-primary-active: hsl(24, 95%, 42%);
+  --color-primary-glow: hsla(24, 95%, 55%, 0.35);
+  --color-primary-bg: hsla(24, 95%, 55%, 0.1);
+
+  /* Secondary Neutral */
+  --color-secondary: hsl(220, 14%, 60%);
+  --color-secondary-hover: hsl(220, 14%, 75%);
+
+  /* Border & Divider */
+  --border-color: hsla(222, 16%, 22%, 0.5);
+  --border-color-hover: hsla(222, 16%, 32%, 0.8);
+  --border-color-glow: hsla(24, 95%, 55%, 0.4);
+
+  /* Status Colors */
+  --color-success: hsl(142, 72%, 40%);
+  --color-success-bg: hsla(142, 72%, 40%, 0.12);
+  --color-success-hover: hsl(142, 72%, 35%);
+  
+  --color-warning: hsl(43, 96%, 50%);
+  --color-warning-bg: hsla(43, 96%, 50%, 0.12);
+  
+  --color-danger: hsl(351, 84%, 55%);
+  --color-danger-bg: hsla(351, 84%, 55%, 0.12);
+  --color-danger-hover: hsl(351, 84%, 48%);
+
+  --color-info: hsl(200, 95%, 50%);
+  --color-info-bg: hsla(200, 95%, 50%, 0.12);
+
+  /* Typography Colors */
+  --text-primary: hsl(210, 20%, 98%);
+  --text-secondary: hsl(218, 12%, 68%);
+  --text-tertiary: hsl(218, 8%, 45%);
+  --text-on-primary: hsl(222, 24%, 6%);
+}
+
+/* Light Theme Configuration */
+[data-theme="light"] {
+  --bg-app: hsl(210, 20%, 96%);
+  --bg-surface: hsla(0, 0%, 100%, 0.7);
+  --bg-surface-solid: hsl(0, 0%, 100%);
+  --bg-surface-hover: hsla(210, 20%, 92%, 0.8);
+  --bg-surface-active: hsla(210, 20%, 88%, 1);
+
+  /* Primary Accent: Premium Hardware Amber/Orange */
+  --color-primary: hsl(24, 95%, 50%);
+  --color-primary-hover: hsl(24, 95%, 45%);
+  --color-primary-active: hsl(24, 95%, 38%);
+  --color-primary-glow: hsla(24, 95%, 50%, 0.25);
+  --color-primary-bg: hsla(24, 95%, 50%, 0.08);
+
+  /* Secondary Neutral */
+  --color-secondary: hsl(220, 10%, 45%);
+  --color-secondary-hover: hsl(220, 10%, 30%);
+
+  /* Border & Divider */
+  --border-color: hsla(220, 15%, 85%, 0.7);
+  --border-color-hover: hsla(220, 15%, 70%, 1);
+  --border-color-glow: hsla(24, 95%, 50%, 0.3);
+
+  /* Status Colors */
+  --color-success: hsl(142, 65%, 36%);
+  --color-success-bg: hsla(142, 65%, 36%, 0.08);
+  --color-success-hover: hsl(142, 65%, 30%);
+  
+  --color-warning: hsl(38, 92%, 44%);
+  --color-warning-bg: hsla(38, 92%, 44%, 0.08);
+  
+  --color-danger: hsl(351, 75%, 48%);
+  --color-danger-bg: hsla(351, 75%, 48%, 0.08);
+  --color-danger-hover: hsl(351, 75%, 40%);
+
+  --color-info: hsl(196, 90%, 40%);
+  --color-info-bg: hsla(196, 90%, 40%, 0.08);
+
+  /* Typography Colors */
+  --text-primary: hsl(222, 24%, 12%);
+  --text-secondary: hsl(220, 12%, 40%);
+  --text-tertiary: hsl(220, 8%, 60%);
+  --text-on-primary: hsl(0, 0%, 100%);
+}
